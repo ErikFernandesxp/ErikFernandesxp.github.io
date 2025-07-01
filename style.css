@@ -1,0 +1,255 @@
+/* Zerando tudo pra começar limpo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo geral do corpo da página */
+body {
+  font-family: 'Segoe UI', sans-serif; /* Escolhi essa fonte porque achei mais moderna */
+  background-color: #0e0e0e; /* Cor de fundo escura, acho bonito */
+  color: #f0f0f0; /* Cor do texto mais clara pra dar contraste */
+}
+
+/* Layout principal com duas colunas lado a lado */
+.container {
+  display: flex; /* Deixa os dois lados (perfil e conteúdo) um do lado do outro */
+  min-height: 100vh; /* Faz ocupar toda a altura da tela */
+}
+
+/* Parte da esquerda com minhas infos básicas */
+.perfil {
+  width: 35%; /* Pegando 35% da largura da tela */
+  background-color: #181818; /* Fundo um pouco mais claro que o body */
+  display: flex;
+  flex-direction: column; /* Os itens ficam um embaixo do outro */
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* minha foto */
+.foto {
+  width: 430px;
+  height: 430px;
+  border-radius: 70%; /* Deixando bem arredondada */
+  border: 3px solid #000707; /* Uma bordinha escura pra destacar */
+  margin-bottom: 1rem;
+}
+
+/* Nome destacado */
+.perfil h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Descrição do que eu sou */
+.descricao {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+/* Menu com meus links (Contatos, Projetos, etc) */
+.perfil nav ul {
+  list-style: none; /* Tira as bolinhas da lista */
+}
+
+.perfil nav ul li {
+  margin: 10px 0;
+}
+
+.perfil nav ul a {
+  color: #00ffff; /* Azul claro, bem chamativo */
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0,5; /* Animação quando passa o mouse */
+}
+
+.perfil nav ul a:hover {
+  color: #ffffff; /* Fica branco quando passa o mouse */
+}
+
+/* Parte da direita com o conteúdo principal */
+.conteudo {
+  width: 65%; /* O resto da tela */
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.conteudo h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.conteudo h3 {
+  color: #00ffff;
+  font-size: 1.5rem;
+  min-height: 30px;
+  margin-bottom: 1rem;
+}
+
+.conteudo p {
+  color: #aaa; /* Texto mais suave */
+  font-size: 1.1rem;
+}
+
+/* Seções como contatos, projetos, etc */
+.secao {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #1c1c1c; /* Fundo um pouco mais claro pra diferenciar */
+  border-radius: 8px;
+  box-shadow: 0 0 10px #0005; /* Sombra pra dar destaque */
+}
+
+.secao h2 {
+  color: #00ffff;
+  margin-bottom: 1rem;
+}
+
+.secao ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.secao ul li {
+  margin: 10px 0;
+}
+
+.secao a {
+  color: #c00b0b;
+  text-decoration: none;
+}
+
+/* Onde ficam os cartões dos projetos */
+.cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap; /* Quebra de linha se não couber na tela */
+}
+
+/* Estilo de cada projeto */
+.card {
+  background-color: #2a2a2a;
+  padding: 1rem;
+  border-radius: 6px;
+  flex: 1 1 45%; /* Responsivo: tenta ocupar 45% da largura */
+  box-shadow: 0 0 5px #0003;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: #00ffff;
+}
+
+/* Lista com as tecnologias que estou aprendendo */
+.lista-tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.lista-tecnologias li {
+  background-color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+/* Botão que muda o tema do site (claro/escuro) */
+.botao-tema {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #00ffff;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffff88;
+  transition: 0.3s;
+  z-index: 999; /* Pra ficar por cima de tudo */
+}
+
+.botao-tema:hover {
+  background-color: #ffffff;
+}
+
+/* Aqui começa o estilo pro modo claro (quando ativo pelo botão) */
+body.modo-claro {
+  background-color: #f5f5f5;
+  color: #111;
+}
+
+body.modo-claro .perfil {
+  background-color: #ffffff;
+  color: #111;
+}
+
+body.modo-claro .conteudo,
+body.modo-claro .secao {
+  background-color: #ffffff;
+  color: #111;
+}
+
+body.modo-claro .card {
+  background-color: #f0f0f0;
+}
+
+body.modo-claro .lista-tecnologias li {
+  background-color: #ddd;
+  color: #000;
+}
+
+body.modo-claro .botao-tema {
+  background-color: #111;
+  color: #fff;
+  box-shadow: 0 0 10px #00000088;
+}
+
+/* Rodapé do site, bem simples */
+.rodape {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+}
+
+/* Botões dos projetos, que são links estilizados */
+.botao-projeto {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  background-color: #00ffff;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+  box-shadow: 0 0 5px #00ffff88;
+}
+
+.botao-projeto:hover {
+  background-color: #ffffff;
+}
+
+/* Estilo adaptado para modo claro */
+body.modo-claro .botao-projeto {
+  background-color: #111;
+  color: #fff;
+  box-shadow: 0 0 10px #00000088;
+}
+
+body.modo-claro .botao-projeto:hover {
+  background-color: #333;
+}
