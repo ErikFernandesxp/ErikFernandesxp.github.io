@@ -7,23 +7,23 @@
 
 /* Estilo geral do corpo da página */
 body {
-  font-family: 'Segoe UI', sans-serif; /* Escolhi essa fonte porque achei mais moderna */
-  background-color: #0e0e0e; /* Cor de fundo escura, acho bonito */
-  color: #f0f0f0; /* Cor do texto mais clara pra dar contraste */
+  font-family: 'Segoe UI', sans-serif; /* Fonte moderna */
+  background-color: #0e0e0e; /* Cor de fundo escura */
+  color: #f0f0f0; /* Cor do texto clara */
 }
 
 /* Layout principal com duas colunas lado a lado */
 .container {
-  display: flex; /* Deixa os dois lados (perfil e conteúdo) um do lado do outro */
-  min-height: 100vh; /* Faz ocupar toda a altura da tela */
+  display: flex;
+  min-height: 100vh;
 }
 
 /* Parte da esquerda com minhas infos básicas */
 .perfil {
-  width: 35%; /* Pegando 35% da largura da tela */
-  background-color: #181818; /* Fundo um pouco mais claro que o body */
+  width: 35%;
+  background-color: #181818;
   display: flex;
-  flex-direction: column; /* Os itens ficam um embaixo do outro */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 2rem;
@@ -32,10 +32,10 @@ body {
 
 /* minha foto */
 .foto {
-  width: 130px;
-  height: 130px;
-  border-radius: 70%; /* Deixando bem arredondada */
-  border: 3px solid #000707; /* Uma bordinha escura pra destacar */
+  width: 430px;
+  height: 430px;
+  border-radius: 70%;
+  border: 3px solid #000707;
   margin-bottom: 1rem;
 }
 
@@ -52,9 +52,9 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Menu com meus links (Contatos, Projetos, etc) */
+/* Menu com meus links */
 .perfil nav ul {
-  list-style: none; /* Tira as bolinhas da lista */
+  list-style: none;
 }
 
 .perfil nav ul li {
@@ -62,19 +62,19 @@ body {
 }
 
 .perfil nav ul a {
-  color: #00ffff; /* Azul claro, bem chamativo */
+  color: #00ffff;
   text-decoration: none;
   font-weight: bold;
-  transition: 0,5; /* Animação quando passa o mouse */
+  transition: 0.5s;
 }
 
 .perfil nav ul a:hover {
-  color: #ffffff; /* Fica branco quando passa o mouse */
+  color: #ffffff;
 }
 
 /* Parte da direita com o conteúdo principal */
 .conteudo {
-  width: 65%; /* O resto da tela */
+  width: 65%;
   padding: 3rem;
   display: flex;
   flex-direction: column;
@@ -93,7 +93,7 @@ body {
 }
 
 .conteudo p {
-  color: #aaa; /* Texto mais suave */
+  color: #aaa;
   font-size: 1.1rem;
 }
 
@@ -101,9 +101,9 @@ body {
 .secao {
   margin-top: 2rem;
   padding: 2rem;
-  background-color: #1c1c1c; /* Fundo um pouco mais claro pra diferenciar */
+  background-color: #1c1c1c;
   border-radius: 8px;
-  box-shadow: 0 0 10px #0005; /* Sombra pra dar destaque */
+  box-shadow: 0 0 10px #0005;
 }
 
 .secao h2 {
@@ -129,7 +129,7 @@ body {
 .cards {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap; /* Quebra de linha se não couber na tela */
+  flex-wrap: wrap;
 }
 
 /* Estilo de cada projeto */
@@ -137,7 +137,7 @@ body {
   background-color: #2a2a2a;
   padding: 1rem;
   border-radius: 6px;
-  flex: 1 1 45%; /* Responsivo: tenta ocupar 45% da largura */
+  flex: 1 1 45%;
   box-shadow: 0 0 5px #0003;
 }
 
@@ -146,7 +146,7 @@ body {
   color: #00ffff;
 }
 
-/* Lista com as tecnologias que estou aprendendo */
+/* Lista com as tecnologias */
 .lista-tecnologias {
   display: flex;
   flex-wrap: wrap;
@@ -161,7 +161,7 @@ body {
   color: #fff;
 }
 
-/* Botão que muda o tema do site (claro/escuro) */
+/* Botão de troca de tema */
 .botao-tema {
   position: fixed;
   bottom: 20px;
@@ -175,14 +175,14 @@ body {
   cursor: pointer;
   box-shadow: 0 0 10px #00ffff88;
   transition: 0.3s;
-  z-index: 999; /* Pra ficar por cima de tudo */
+  z-index: 999;
 }
 
 .botao-tema:hover {
   background-color: #ffffff;
 }
 
-/* Aqui começa o estilo pro modo claro (quando ativo pelo botão) */
+/* Modo claro (quando ativo pelo botão) */
 body.modo-claro {
   background-color: #f5f5f5;
   color: #111;
@@ -214,7 +214,7 @@ body.modo-claro .botao-tema {
   box-shadow: 0 0 10px #00000088;
 }
 
-/* Rodapé do site, bem simples */
+/* Rodapé */
 .rodape {
   background-color: #111;
   color: #fff;
@@ -225,7 +225,7 @@ body.modo-claro .botao-tema {
   border-top: 1px solid #333;
 }
 
-/* Botões dos projetos, que são links estilizados */
+/* Botões dos projetos */
 .botao-projeto {
   display: inline-block;
   margin: 10px 0;
@@ -243,7 +243,6 @@ body.modo-claro .botao-tema {
   background-color: #ffffff;
 }
 
-/* Estilo adaptado para modo claro */
 body.modo-claro .botao-projeto {
   background-color: #111;
   color: #fff;
@@ -252,4 +251,41 @@ body.modo-claro .botao-projeto {
 
 body.modo-claro .botao-projeto:hover {
   background-color: #333;
+}
+
+/* Responsividade para celular e tablet */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .perfil {
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .foto {
+    width: 200px;
+    height: 200px;
+  }
+
+  .conteudo {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .botao-tema {
+    right: 10px;
+    bottom: 10px;
+    padding: 8px 16px;
+  }
 }
