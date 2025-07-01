@@ -32,8 +32,8 @@ body {
 
 /* minha foto */
 .foto {
-  width: 430px;
-  height: 430px;
+  width: 130px;
+  height: 130px;
   border-radius: 70%; /* Deixando bem arredondada */
   border: 3px solid #000707; /* Uma bordinha escura pra destacar */
   margin-bottom: 1rem;
